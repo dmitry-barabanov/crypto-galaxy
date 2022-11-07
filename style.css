@@ -454,7 +454,12 @@ section img#mountains_front {
     .about h2,
     .team h2,
     .join h2 {
-        font-size: 2em;
+        font-size: 1.5em;
+    }
+
+    .about p,
+    .join p {
+        font-size: 1em;
     }
 }
 
@@ -469,7 +474,7 @@ section img#mountains_front {
         font-size: 1em;
     }
     .card .content .details .data h3 {
-        font-size: 0.7em;
+        font-size: 0.8em;
     }
     #btn {
         font-size: 1em;
@@ -488,6 +493,9 @@ section img#mountains_front {
 @media (max-width: 450px) {
     header ul li a {
         zoom: 75%;
+    }
+    #text {
+        font-size: 10vw;
     }
 }
 
