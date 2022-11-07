@@ -1,0 +1,504 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(#2b1055, #7597de);
+    background-color: #2b1055;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+
+header .logo {
+
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.logo img {
+    width: 50px;
+}
+
+header ul {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+header ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
+}
+
+header ul li a:hover, header ul li a.active {
+    background: #fff;
+    color: #2b1055;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to top, #1c0522, transparent);
+    z-index: 1000;
+}
+
+.container {
+    padding: 100px;
+}
+
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+section img#moon {
+    mix-blend-mode: screen;
+}
+
+section img#mountains_front {
+    z-index: 10;
+}
+
+#text {
+    position: absolute;
+    right: -350px;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    z-index: 9;
+    user-select: none;
+}
+
+#btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #fff;
+    color: #2b1055;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(100px);
+    transition: all 0.3s ease 0s;
+}
+
+#btn:hover {
+    box-shadow: 0px 8px 15px rgb(43, 16, 85, 0.5);
+    background-color: #2b1055;
+    color: #fff;
+}
+
+.about {
+    position: relative;
+    background: #1c0522;
+}
+
+.about h2 {
+    font-size: 3.5em;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.about p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.about p a {
+    color: #7597de;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.about p a:hover {
+    text-decoration: underline;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to top, #331f64, transparent);
+    z-index: 1000;
+}
+
+.team {
+    position: relative;
+    background: #331f64;
+}
+
+.team .container {
+    padding-bottom: 200px;
+}
+
+.team h2 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.team p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.team p a {
+    color: #7597de;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.team p a:hover {
+    text-decoration: underline;
+}
+
+.team::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to top, #180e3c, transparent);
+    z-index: 1000;
+}
+
+.join {
+    position: relative;
+    background: #180e3c;
+}
+
+.join .container {
+    padding-bottom: 200px;
+}
+
+.join h2 {
+    font-size: 3.5em;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.join p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.join p a {
+    color: #7597de;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.join p a:hover {
+    text-decoration: underline;
+}
+
+.cards {
+    margin-top: 75px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    position: relative;
+    flex: 0 1 24%;
+    width: 350px;
+    height: 250px;
+    background: #fff;
+    transition: 0.5s;
+    margin-right: 10px;
+}
+
+.card:last-child {
+    margin-right: 0;
+}
+
+/* .card:hover {
+    height: 400px;
+} */
+
+.card .lines {
+    position: absolute;
+    inset: 0;
+    background: #000;
+    overflow: hidden;
+}
+
+.card .lines::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 120px;
+    background: linear-gradient(#786cd7, #786cd7, #786cd7, transparent);
+    animation: animate 4s linear infinite;
+    transition: all 0.3s ease 0s;
+}
+
+.card:hover .lines::before {
+    height: 1200px;
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.card .lines::after {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background: #292929;
+}
+
+.card .imagebox {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    background: #000;
+    transition: 0.5s;
+    z-index: 10;
+    overflow: hidden;
+}
+
+/* .card:hover .imagebox {
+    width: 250px;
+    height: 250px;
+} */
+
+.card .imagebox::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 120px;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(#786cd7, #786cd7, #786cd7, transparent);
+    animation: animate2 5s linear infinite;
+    transition: all 0.3s ease 0s;
+}
+
+.card:hover .imagebox::before {
+    height: 1200px;
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+.card .imagebox::after {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background: #292929;
+}
+
+.card .imagebox img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    filter: grayscale(0.5);
+    transition: 0.3s;
+}
+
+.card:hover .imagebox img {
+    filter: none;
+}
+
+.card .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.card .content .details {
+    padding: 0px 10px 0px 10px;
+    text-align: center;
+    width: 100%;
+    transition: 0.5s;
+    transform: translateY(-40px);
+}
+
+/* .card:hover .content .details {
+    transform: translateY(0px);
+} */
+
+.card .content .details h2 {
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #786cd7;
+    line-height: 1.2em;
+}
+
+.card .content .details h2 span {
+    font-size: 0.75em;
+    font-weight: 500;
+    color: #fff;
+}
+
+.card .content .details .data {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.card .content .details .data h3 {
+    font-size: 0.9em;
+    color: #fff;
+    line-height: 1.2em;
+    font-weight: 500;
+}
+
+@media (max-width: 1270px) {
+    .cards {
+        justify-content: space-around;
+        margin-bottom: 75px;
+    }
+    .card {
+        flex: 0 1 40%;
+    }
+    .card:nth-child(1),
+    .card:nth-child(2) {
+        margin-bottom: 90px;
+    }
+    .container {
+        padding: 80px 50px;
+    }
+    .team .container,
+    .join .container {
+        padding-bottom: 80px;
+    }
+}
+
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+    #moon {
+        top: 20px;
+    }
+    .about h2,
+    .team h2,
+    .join h2 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 745px) {
+    .card {
+        flex: 0 1 85%;
+    }
+    .card:not(:last-child) {
+        margin-bottom: 90px;
+    }
+    .card .content .details h2 {
+        font-size: 1em;
+    }
+    .card .content .details .data h3 {
+        font-size: 0.7em;
+    }
+    #btn {
+        font-size: 1em;
+    }
+    #moon {
+        top: 50px !important;
+    }
+}
+
+@media (max-width: 511px) {
+    header ul li a {
+        zoom: 85%;
+    }
+}
+
+@media (max-width: 450px) {
+    header ul li a {
+        zoom: 75%;
+    }
+}
+
+@media (max-width: 400px) {
+    header ul li a {
+        zoom: 70%;
+    }
+}
+
+@media (max-width: 370px) {
+    header ul li a {
+        zoom: 65%;
+    }
+}
